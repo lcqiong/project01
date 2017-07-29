@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>传琼牌考勤管理系统</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../Iconfont/iconfont.css">
+    <script type="text/javascript" src="../jquery/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>员工考勤系统</h1>
+      <ul>
+        <li class="current">首页</li>
+        <li>后台管理</li><!--<div class="spacer"></div>-->
+        <li>注销</li>
+      </ul>
+    </header>
+    <div class="main">
+      <aside id="aside">
+        <div class="sider_tit">
+          <div class="logo">
+            <img src="../img/logo.gif" alt="传琼" title="传琼">
+          </div><span>传琼股份有限公司</span>
+        </div>
+        <div class="navManager">
+          <li id="manager"><i class="iconfont icon-jianhao" id="ii"></i>&nbsp;基本信息管理</li>
+          <div class="nav" id="navlist">
+          <li class="currents"><a href="#"><i class="iconfont icon-kaoqinchuqin"></i>&nbsp;个人出勤记录</a></li>
+          <li class="self_message" id="self"><a href="#"><i class="iconfont icon-yonghu"></i>&nbsp;个人信息</a><div class="modify" id="mod">
+            <p><a href="#">修改密码</a></p>
+            <p><a href="#">编辑个人信息</a></p>
+          </div></li>
+          <li id="furlough"><a href="#"><i class="iconfont icon-xiujiashenqing"></i>&nbsp;个人申请休假</a>
+            <div class="modify" id="apply">
+            <p><a href="#">休假记录</a></p>
+            <p><a href="#">申请休假</a></p>
+          </div></li>
+          <li><a href="#"><i class="iconfont icon-zhuxiaotouzhuzhanghu" style="font-size:14px;"></i>&nbsp;注销退出</a></li>
+        </div>
+          </div>
+      </aside>
+      <article>
+        <table id="elist">
+          <caption>考勤记录的输出放在此表格中</caption>
+          <tr>
+            <th>姓名</th>
+            <th>姓名</th>
+            <th>姓名</th>
+            <th>姓名</th>
+            <th>姓名</th>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>12</td>
+            <td>12</td>
+            <td>12</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>12</td>
+            <td>12</td>
+            <td>12</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>12</td>
+            <td>12</td>
+            <td>12</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>12</td>
+            <td>12</td>
+            <td>12</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>12</td>
+            <td>12</td>
+            <td>12</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>13</td>
+            <td>13</td>
+            <td>13</td>
+            <td>13</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>13</td>
+            <td>13</td>
+            <td>13</td>
+            <td>13</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>13</td>
+            <td>13</td>
+            <td>13</td>
+            <td>13</td>
+          </tr>
+        </table>
+        <div class="page">
+          此处放页数
+        </div>
+        <div class="signed">
+            <div class="click_signed" id="sign">
+                签到
+            </div>
+        </div>
+      </article>
+    </div>
+    <footer>
+      <div class="footer_content">
+          <p><ul>
+            <li><a href="#">公司简介</a></li>
+            <li><a href="#">公司部门</a></li>
+            <li><a href="#">问题解答</a></li>
+            <li><a href="#">在线人工服务</a></li>
+          </ul></p>
+          <p>    &nbsp;</p>
+          <p>   </p>
+          <br>
+          <p style="text-align:center;color:#fff;">Copyright&nbsp;©2008-2017&nbsp;&nbso;传琼股份有限公司&nbsp;&nbsp;All&nbsp;Right&nbsp;Rwserved&nbsp;&nbsp;&nbsp;粤ICP090</p>
+      </div>
+    </footer>
+  </body>
+  <script type="text/javascript">
+    $("#manager").click(function(){
+      if(document.getElementById("ii").className == "iconfont icon-jianhao"){
+        $("#navlist").toggle(300);
+        document.getElementById("ii").className= "iconfont icon-plus-circle";
+      }else{
+        $("#navlist").toggle(300);
+        document.getElementById("ii").className= "iconfont icon-jianhao";
+      }
+    });
+    $("#sign").click(function(){
+      $("#sign").html("签到成功");
+      $("#sign").css("background","red").css("font-size","16px");
+
+    });
+    $("#self").mouseover(function(){
+      $("#mod").css("display","block");
+    }).mouseout(function(){
+      $("#mod").css("display","none");
+    });
+    $("#furlough").mouseover(function(){
+      $("#apply").css("display","block");
+    }).mouseout(function(){
+      $("#apply").css("display","none");
+    });
+  </script>
+</html>

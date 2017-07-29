@@ -1,0 +1,34 @@
+*{  margin:0;  padding:0;}
+html{overflow-x: hidden; overflow-y: hidden; }
+.main{  width:100%;  height:772px;  background: url('../img/index.jpg') no-repeat;  animation:move 3s infinite;  opacity:0.8;  float:left;}
+@keyframes move {  0%{  }  50%{    transform: scale(1.02);  }  100%{    transform: scale(1);  }}
+h1{text-align: center;color:#fff;font-family: "华文行楷";margin-top: 20px;position: absolute;top:10px;left:80px;}
+.logo img{width:100px;height:100px;position: absolute;top:0;left:0;cursor:pointer;}
+.datalist{position:absolute;top:200px;left:540px;width:400px;  height: 300px;  padding: 20px;  background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#016166), to(#02090b));  opacity:1;  box-shadow: 10px -10px  5px ,-10px 10px 5px;}
+.login{  margin-left: 60px;}
+.login h3{  text-align: center;  margin-right: 60px;  color:#fff;font-size: 24px;}
+.login .td{  height:20px;  width:200px;  padding:4px;font-size: 14px;}
+.login .td input{ border:1px;height:40px; width:240px;padding-left:3px;}
+.login .submit{  text-align: right;}
+.login .sub{  width:100%;  height:40px;font-size: 20px;font-family: "宋体";cursor: pointer; border:none;  background:#016166;  color:#fff;}
+.login .sub:hover{background: #016199;font-weight: bold;}
+.login .tit{color:#fff;}
+.login #isExist{display: none;font-size: 10px;color:red;}
+.login #ispwd{display: none;font-size: 10px;color:red;}
+.login .unpwd{text-align: right;}
+.login .unpwd a{display: block;text-decoration: none;color:white;font-size: 12px;}
+.login .unpwd a:hover{color:#33ff33;}
+.login .register{text-align: right;}
+.login .register a{display: block;text-decoration: none;color: #fff;font-size: 12px;}
+.login .register a:hover{color:#33ff33;}
+.header{position: absolute;right:80px;top:20px;}
+.header .spacer{height:10px;border:1px solid #fff;margin:0 8px;display: inline-block;}
+.header a{display: inline-block;text-decoration: none;color:#fff;font-size: 14px;}
+.header a:hover{color:#33ff33}
+.footer{width:100%;height:100px;background:#333333;position: absolute; bottom:0;opacity:0.5;}
+.footer .footer_content{width:1000px;height:80px;margin:20px auto; }
+.footer .footer_content ul{margin-left:300px;}
+.footer .footer_content ul li{display: inline-block;list-style: none;float:left;text-align: center;width:100px;}
+.footer .footer_content ul li a{text-decoration: none;color:#fff;}
+.footer .footer_content ul li a:hover{color:#33ff33;}
+.mainNav{position :absolute;top:140px;left:400px;width:540px;height:40px;background: red;}

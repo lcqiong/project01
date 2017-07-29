@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>员工注册</title>
+    <link rel="stylesheet" href="../css/register.css">
+    <script type="text/javascript" src="../jquery/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+      <div class="main">
+      </div>
+        <div class="logo">
+          <img src="../img/logo.gif" alt="传琼" title="传琼">
+        </div><h1>欢迎注册</h1>
+        <div class="header">
+            <a href="#">公司历史</a><div class="spacer"></div><a href="#">服务指南</a>
+        </div>
+      <div class="datalist">
+          <form class="register" action="" method="post" >
+              <p><h3>注 册</h3></p>
+              <table>
+                <tr><td colspan="3"><br></td></tr>
+                <tr><td class="subtitle">员工编号：</td><td><input type="text" name="uid" id="userId" class="input" placeholder="请输入编号" onblur="checkUidExist()"/></td><td><span id="uid" class="warning">该员工编号已存在</span></td></tr>
+                <tr><td class="subtitle">员工姓名：</td><td><input type="text" name="uname" id="userName" class="input" placeholder="请输入姓名" onblur="checkUserNameExist()"/></td><td><span id="uname" class="warning">员工姓名不能为空</span></td></tr>
+                <tr>
+                  <td class="subtitle">密码：</td><td><input type="password" name="upwd" placeholder="请输入密码"></td><td><span id="upwd" class="warning">密码不能为空</span></td>
+                </tr>
+                <tr><td class="subtitle">员工年龄：</td><td><input type="text" name="uage" id="userAge" class="input" placeholder="请输入年龄" onblur="checkUageExist()"/></td><td><span id="uage" class="warning">员工年龄必须在1~100之间</span></td></tr>
+                <tr><td class="subtitle">员工邮箱：</td><td><input type="text" name="uemail" id="userEmail" class="input" placeholder="请输入邮箱" onblur="checkUemailExist()"/></td><td><span id="uemail" class="warning">邮箱不能为空</span></td></tr>
+                <tr><td class="subtitle">验证码：</td><td><input type="text" class="code" id="result" onblur="validate()"/>&nbsp;<input type="button" id="code" class="creatCode" onclick="creatCode()"></td><td><span style="color:red;display:none;" id="res">x</span></td></tr>
+                <tr><td colspan="2" class="submit"><input type="submit" name="submit" value="注 册" class="sub">&nbsp;<input type="reset" name="" value="重 置" class="sub"></td></tr>
+
+              </table>
+          </form>
+      </div>
+      <div class="footer">
+          <div class="footer_content">
+              <p><ul>
+                <li><a href="#">公司简介</a></li>
+                <li><a href="#">公司部门</a></li>
+                <li><a href="#">问题解答</a></li>
+                <li><a href="#">在线人工服务</a></li>
+              </ul></p>
+              <p>    &nbsp;</p>
+              <p>   </p>
+              <br>
+              <p style="text-align:center;color:#fff;">Copyright&nbsp;©2008-2017&nbsp;&nbso;传琼股份有限公司&nbsp;&nbsp;All&nbsp;Right&nbsp;Rwserved&nbsp;&nbsp;&nbsp;粤ICP090</p>
+          </div>
+      </div>
+  </body>
+  <script type="text/javascript">
+  var code;
+    function creatCode(){
+      code = "";
+      var codeLength = 4;
+      var checkCode = document.getElementById("code");
+      checkCode.value="";
+      var random = new Array(0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R',
+      'S','T','U','V','W','X','Y','Z');
+      for(var i = 0; i < codeLength; i++) {
+         var index = Math.floor(Math.random()*36);
+         code += random[index];
+        checkCode.value += random[index]+" ";
+
+     }
+    var color=modBgColor();
+    checkCode.style.color=color;
+}
+creatCode();
+  function validate(){
+    var inputCode = document.getElementById("result").value.toUpperCase();
+    if(inputCode.length <= 0) {
+      $("#res").html("请输入验证码").css("display","block").css("font-size","10px");
+    }else{
+      $("#res").css("display","none");
+     if(inputCode != code ) {
+        $("#res").html("验证码输入错误，请重新输入").css("display","block").css("font-size","10px");
+        creatCode();
+        document.getElementById("result").value = "";
+    }
+    else {
+      $("#res").html("√").css("display","block").css("color","green");
+    }
+}
+}
+function modBgColor(){
+  var str="0123456789abcde";
+  var color = '#';
+  for(i = 0; i<6;i++){
+    color = color + str.charAt(Math.random() * 16);
+  }
+  return color;
+}
+function checkUidExist(){
+    if($("#userId").val()==""){
+      $("#uid").html("员工编号不能为空").css("display","block");
+    }else{
+      $("#uid").css("display","none");
+      //ajax验证员工编号是否重复
+    }
+  }
+  function checkUserNameExist(){
+    if($("#userName").val()==""){
+      $("#uname").html("员工姓名不能为空").css("display","block");
+    }else{
+      $("#uname").css("display","none");
+  }
+}
+  function checkUageExist(){
+    if($("#userAge").val()==""){
+      $("#uage").html("员工年龄不能为空").css("display","block");
+    }else if($("#userAge").val()<=18){
+        $("#uage").html("员工年龄不能小于18").css("display","block");
+    }else if( $("#userAge").val()>=60){
+      $("#uage").html("员工年龄不能大于60").css("display","block");
+    }else{
+      $("#uage").css("display","none");
+  }
+}
+  function checkUemailExist(){
+    var reg=/^[A-Za-z0-9]{1,}[@]{1}[A-Za-z0-9]{1,}[.]{1}[A-Za-z]{2,3}$/;
+    if($("#userEmail").val() == ""){
+      $("#uemail").css("display","block");
+    }else if(!reg.test($("#userEmail").val())){
+      $("#uemail").html("邮箱格式错误").css("display","block");
+    }else{
+      $("#uemail").css("display","none");
+    }
+  }
+</script>
+</html>

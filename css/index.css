@@ -1,0 +1,42 @@
+*{
+  margin:0;
+  padding:0;
+}
+header{width:100%;height:150px;background:-webkit-gradient(linear, 100% 0%, 0% 0%,from(#313131), to(#999));}
+header h1{padding:10px 0 0 40px;font-weight: 100;font-family: "宋体";color:#fff;}
+header ul{margin-left:600px;margin-top: -38px;}
+header ul li{list-style: none;display: inline-block;width:120px;line-height: 30px;text-align: center;cursor: pointer;color:#fff;font-size: 20px;}
+header ul .spacer{width:0;height: 10px;border:1px solid #fff;display: inline-block;}
+header ul li:hover{background: #fff;color:#000;}
+.current{background: #fff;color:#000;}
+.main{width:100%;height:520px;background: #f6f6f6;}
+aside{width:18%;background: #666;height:100%;float:left;position: relative;}
+/*aside内部盒子*/
+.sider_tit{width:100%;height:60px;background: #666; position:relative;border-bottom:1px solid #eee;}
+.sider_tit .logo{display: inline-block;margin-top: 10px;}
+.sider_tit .logo img{width:50px;height:50px;position: absolute;left:3px;top:3px;}
+.sider_tit span{margin-top: 20px;position: absolute;left: 60px;font-family: "华文行楷";font-size: 20px;color:#fff;}
+#i_left{position: absolute;right:10px;top:20px;color:#fff;cursor:pointer;}
+.navManager{position: absolute;top:100px;left:40px;}
+.navManager li{color:#fff;font-size: 20px;cursor: pointer;list-style: none;}
+.nav a{display:block;text-decoration:none;line-height:40px;font-size:16px;color:#e4e4e4;border-bottom: 1px solid #fff;width:160px;padding-left: 12px;}
+.nav a:hover{color:#fff;}
+article{background: #f6f6f6;height:520px;width:82%;float:left;position: relative;}
+/*article内部盒子*/
+article table{width:1000px;background-color: #eee;}
+article table caption{font-size: 20px;font-family: "宋体";margin-top: 10px;}
+article table td{width:200px;text-align: center;}
+#elist{margin-left: 100px;}
+.page{width:100%;height:30px;text-align: right;background: blue;}
+.signed{width:100%;background: #f6f6f6;height:110px;display: flex;justify-content: center;align-items: center;position: absolute;bottom:20px;}
+.click_signed{width:80px;height:80px;background: #311333;font-size: 26px;font-weight: bold;color:#fff;font-family: "宋体";display: flex;justify-content: center;align-items: center;border-radius: 50%; cursor: pointer;}
+.self_message,#furlough{position: relative;}
+.navManager .currents a{background-color: #ccc;color:#000;}
+.modify{position: absolute;right:-172px;top:0px;background: #555;display: none;z-index: 10;}
+.modify p:last-child a{border:0;}
+footer{width:100%;height:90px;background: #313131;}
+footer .footer_content{width:1000px;height:80px;margin:0 auto; }
+footer .footer_content ul{margin-left:300px;}
+footer .footer_content ul li{display: inline-block;list-style: none;float:left;text-align: center;width:100px;}
+footer .footer_content ul li a{text-decoration: none;color:#fff;}
+footer .footer_content ul li a:hover{color:#33ff33;}

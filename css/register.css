@@ -1,0 +1,43 @@
+*{  margin:0;  padding:0;}
+html{overflow-x: hidden; overflow-y: hidden; }
+.main{  width:100%;  height:772px;  background: url('../img/index.jpg') no-repeat;  animation:move 3s infinite;  opacity:0.8;  float:left;}
+@keyframes move {  0%{  }  50%{    transform: scale(1.02);  }  100%{    transform: scale(1);  }}
+h1{text-align: center;color:#fff;font-family: "华文行楷";margin-top: 20px;position: absolute;top:10px;left:80px;}
+.logo img{width:100px;height:100px;position: absolute;top:0;left:0;cursor:pointer;}
+.datalist{position:absolute;top:100px;left:540px;width:400px;  height: 420px;  padding: 20px;  background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#016166), to(#02090b));  opacity:1;  box-shadow: 10px -10px  10px #02090b,-10px 10px 10px #02090b;}
+.header{position: absolute;right:80px;top:20px;}
+.header .spacer{height:10px;border:1px solid #fff;margin:0 8px;display: inline-block;}
+.header a{display: inline-block;text-decoration: none;color:#fff;font-size: 14px;}
+.header a:hover{color:#33ff33}
+/*注册表单css样式开始*/
+.register h3{font-size: 24px;text-align: center;color:#fff;}
+.register table{margin-left: 40px;}
+.register .subtitle{font-size: 16px;color:#fff;text-align: right;}
+.register tr{height:40px;}
+.register input{height:26px;}
+.register .sub{ width:100%;  height:40px;font-size: 20px;font-family: "宋体";cursor: pointer; border:0;  animation: change 3s infinite; color:#fff;margin-left: 20px;}
+@keyframes change {
+  0%{
+    background: #016166;
+    font-weight: normal;
+  }
+  50%{
+    background:#016199;
+    font-weight: bold;
+  }
+  100%{
+    background: #016166;
+    font-weight: normal;
+  }
+}
+.reegister .submit{text-align: right;}
+.register .code{width:80px;}
+.register .creatCode{width:60px;vertical-align: middle;border:0;background: #fff;}
+.register .warning{display:none;color:red;font-size: 10px;}
+/*注册表单css样式结束*/
+.footer{width:100%;height:100px;background:#333333;position: absolute; bottom:0;opacity:0.5;}
+.footer .footer_content{width:1000px;height:80px;margin:20px auto; }
+.footer .footer_content ul{margin-left:300px;}
+.footer .footer_content ul li{display: inline-block;list-style: none;float:left;text-align: center;width:100px;}
+.footer .footer_content ul li a{text-decoration: none;color:#fff;}
+.footer .footer_content ul li a:hover{color:#33ff33;}
